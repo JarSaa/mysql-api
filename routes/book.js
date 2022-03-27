@@ -9,7 +9,7 @@ router.get('/:id?',
       if (err) {
         response.json(err);
       } else {
-        response.json(dbResult);
+        response.json(dbResult[0]);
       }
     });
   } else {
@@ -30,7 +30,7 @@ function(request, response) {
     if (err) {
       response.json(err);
     } else {
-      response.json(request.body);
+      response.json(dbResult);
     }
   });
 });
